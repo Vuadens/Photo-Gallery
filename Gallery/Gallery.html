@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Proyecto</title>
+      <meta charset="utf-8"> 
+      <meta name="description" content="Esta es una galería de fotos de los mejores músicos">  
+      <meta name="keywords" content="cerati,rhcp,rolling stones"> 
+      <meta name="author" content="Neo"> 
+      <meta name="robots" content="noindex">
+      <link rel="icon" href="C:\Users\joako\OneDrive\Escritorio\Pruebas\Programación\Página\Proyecto galería\Multimedia\Icons\icon_50px.svg">
+      <link rel="stylesheet" href="Gallery_style.css"> <!--vinculo con el archivo de css-->
+</head>
+<!----------------------------------------------------MAIN PAGE----------------------------------------------------------->
+
+<body>
+<!-----------------------------------------------------HEADER------------------------------------------------------------->
+<header>
+  <a href="C:\Users\joako\OneDrive\Escritorio\Pruebas\Programación\Página\Proyecto galería\Index\Home\Home.html">
+      <img class="logo" src="C:\Users\joako\OneDrive\Escritorio\Pruebas\Programación\Página\Proyecto galería\Multimedia\Icons\icon_100px.svg" alt="logo">
+         </a>
+           <div>
+            <nav>
+              <ul class="nav_links">
+                 <li><b><a href="\Home\Home.html">Home</a></b></li>
+                 <li><b><a href="\Gallery\Gallery.html">Gallery</a></b></li>
+                 <li><b><a href="\About\About.html">About</a></b></li>
+            </ul>
+        </nav>
+     </div>
+   <a href="https://linktr.ee/jvuadens" target="_blank"><button>Contact</button></a>
+ </header>      
+<!------------------------------------------------------HEADER------------------------------------------------------------>
+<Section>
+
+  <div class="full-img" id="fullImgBox">
+    <img src="C:\Users\joako\OneDrive\Escritorio\Pruebas\Programación\Página\Proyecto galería\Multimedia\Gallery media\16.jpg" id="fullImg">
+    <span onclick="closeFullImg()">X</span>
+  </div>
+    <div class="img-gallery">
+      <img src="\Multimedia\Gallery media\16.jpg" onclick="openFullImg(this.src)">
+      <img src="\Multimedia\Gallery media\17.jpg" onclick="openFullImg(this.src)">
+      <img src="\Multimedia\Gallery media\18.jpg" onclick="openFullImg(this.src)">
+      <img src="\Multimedia\Gallery media\19.jpg" onclick="openFullImg(this.src)">
+      <img src="\Multimedia\Gallery media\20.jpg" onclick="openFullImg(this.src)">
+      <img src="\Multimedia\Gallery media\21.jpg" onclick="openFullImg(this.src)">
+      <img src="\Multimedia\Gallery media\23.jpg" onclick="openFullImg(this.src)">
+      <img src="\Multimedia\Gallery media\24.jpg" onclick="openFullImg(this.src)">
+      <img src="\Multimedia\Gallery media\25.jpg" onclick="openFullImg(this.src)">
+      <img src="\Multimedia\Gallery media\26.jpg" onclick="openFullImg(this.src)">
+   </div>
+
+
+   <script>
+
+  var fullImgBox = document.getElementById("fullImgBox")
+  var fullImg = document.getElementById("fullImg")
+
+  function openFullImg(pic){
+    fullImgBox.style.display = "flex";
+    fullImg.src = pic;
+
+  }
+   </script>
+</Section>

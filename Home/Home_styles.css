@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&family=Roboto&display=swap');
+
+* { 
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background-color: #24252A;
+}
+
+li, a, button{
+    font-family: "Mulish", sans-serif;
+    font-weight: 500px;
+    color: white;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+.logo{ 
+    cursor: pointer;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20 px;
+
+    
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+    padding: 0px 30px;
+    font-size: 30px;
+    
+}
+
+.nav_links li a:hover{
+    color: #0088a9;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: black;
+    font-size: 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0, 136, 169, 0.7);
+}
+
+.main_title{
+    align-items: center;
+    position: relative;
+    left: 40%;
+    display: inline-block;
+    padding: 0px 20 px;
+    font-size: 35px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 500px;
+    color:  #0088a9;
+}
+
+.albums{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 30px 10%;
+}
+
+.covers{
+    box-sizing: border-box;
+    border-radius: 1%;
+    height: 350px;
+    width: 350px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.second_title{
+    position: relative;
+    left: 40%;
+    display: inline-block;
+    padding: 0px 20 px;
+    font-size: 35px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 500px;
+    color: #d7524d;
+}
+
+.artists{    
+    display: column;
+    justify-content:space-between;
+    align-items:center;
+    padding: 30px 10%;
+}
+
+.photo {
+    box-sizing: border-box;
+    box-shadow: 0px 0px;
+    border-radius: 1%;
+    height: 270px;
+    width: 270px;
+    margin: 15px;
+    outline: 5px black;
+    cursor: pointer;
+}
+
+/*------------------------------Footer----------------------*/
+.footer{
+    background-color: #0088a9;
+    display: block;
+}
+
+.footer_title{
+       line-height: 20px;
+       color:black;
+       font-size: 30px;
+       font-family: Georgia, 'Times New Roman', Times, serif;
+       text-align: center;
+       text-decoration: dashed;
+}
