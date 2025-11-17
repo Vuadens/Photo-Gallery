@@ -28,3 +28,22 @@ window.onmousemove = e => {
         image.style.objectPosition = `${100 + clampedPercentage}% center`;
     }
 }
+
+window.onwheel = e => {
+    e.preventDefault();
+    
+    const currentPercentage = parseFloat(track.dataset.percentage || 0);
+    const scrollSpeed = 3; // Velocidad de scroll (ajustable)
+    const delta = e.deltaY > 0 ? scrollSpeed : -scrollSpeed;
+    const nextPercentage = currentPercentage + delta;
+    const clampedPercentage = Math.min(Math.max(nextPercentage, -100), 0);
+
+    track.dataset.percentage = clampedPercentage;
+    track.dataset.prevPercentage = clampedPercentage;
+    
+    track.style.transform = `translate(${clampedPercentage}%, 45%)`;
+
+    for(const image of track.getElementsByClassName("image")){
+        image.style.objectPosition = `${100 + clampedPercentage}% center`;
+    }
+}
