@@ -7,7 +7,7 @@ body{
 }
 
 li, a, button{
-    font-family: "Mulish", sans-serif;
+    font-family: sans-serif;
     font-weight: 500px;
     color: white;
     text-decoration: none;
@@ -30,9 +30,7 @@ header{
 
 .nav_links li{
     display: inline-block;
-    padding: 0px 20 px;
-
-    
+    padding: 0px 20px;
 }
 
 .nav_links li a{
@@ -72,12 +70,13 @@ button:hover{
     display: flex;
     gap: 4vmin;
     position: absolute;
+    top: 15px;
     left: 50%; transform: translate(-50%, 50%);
     transition: transform 0.15s ease-out;
 
 }
 
 #img-track > .image {
-    transition: object-position 0.15s ease-out;
+    transition: object-position 0.25s ease-out;
 }
 

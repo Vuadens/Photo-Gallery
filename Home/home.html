@@ -27,40 +27,40 @@
 <a href="https://linktr.ee/jvuadens" target="_blank"><button>Contact</button></a>
 </header>      
 
-
-<!--ALBUMS--->
-
- <Section>
-    <div>
-     <H1 class="main_title">My favourite albums</H1>
-       <div class="albums">
-        <img class="covers" src="../Multimedia/Albums/Graduation.png" title="Graduation">
-        <img class="covers"src="../Multimedia/Albums/Siempre.png" title="Siempre es Hoy">
-        <img class="covers"src="../Multimedia/Albums/Pappo.png" title="Volumen 3 - Pappo´s Blues">
-        <img class="covers"src="../Multimedia/Albums/Californication.png" title="Californication">
-       </div>      
-          
-
-<BR>
-<!--Artists---> 
-
 <Section>
-  <div>
-   <H2 class="second_title">My favourite artists</H2>
-     <div class="artists">
-        <img class="photo" src = "/Multimedia/Artists/bob.png"  title="">
-        <img class="photo" src = "/Multimedia/Artists/jim.png" title="">
-        <img class="photo"src= "/Multimedia/Artists/charly.png" title="">
-        <img class="photo"src= "/Multimedia/Artists/jimi.png" title="">
-        <img class="photo"src= "/Multimedia/Artists/ye.png" title="">
-        <img class="photo"src= "/Multimedia/Artists/gus.png" title="">
-        <img class="photo"src= "/Multimedia/Artists/flea.png" title="">
-        <img class="photo"src= "/Multimedia/Artists/jagger.png" title="">
-        <img class="photo"src= "/Multimedia/Artists/shock.png" title="">
-        <img class="photo"src= "/Multimedia/Artists/clapton.png" title="">
-    </div> 
-  </div>
+<H1 class="main_title">My favourite albums</H1>
 
-  <script src="home.js"></script>
+<div class="albums">
+      <img class="covers" src="../Multimedia/Albums/Graduation.png" title="Graduation" onclick="openFullImg(this.src)">
+      <img class="covers"src="../Multimedia/Albums/Siempre.png" title="Siempre es Hoy" onclick="openFullImg(this.src)">
+      <img class="covers"src="../Multimedia/Albums/Pappo.png" title="Volumen 3 - Pappo´s Blues" onclick="openFullImg(this.src)">
+      <img class="covers"src="../Multimedia/Albums/Californication.png" title="Californication" onclick="openFullImg(this.src)">
+</div>      
+          
+<Section>
+<H2 class="second_title">My favourite artists</H2>
+
+<div class="artists">
+    <img class="photo" src = "/Multimedia/Artists/bob.png"  onclick="openFullImg(this.src)">
+    <img class="photo" src = "/Multimedia/Artists/jim.png" onclick="openFullImg(this.src)">
+    <img class="photo" src = "/Multimedia/Artists/charly.png" onclick="openFullImg(this.src)">
+    <img class="photo" src = "/Multimedia/Artists/jimi.png" onclick="openFullImg(this.src)">
+    <img class="photo" src = "/Multimedia/Artists/ye.png" onclick="openFullImg(this.src)">
+    <img class="photo" src = "/Multimedia/Artists/gus.png" onclick="openFullImg(this.src)">
+    <img class="photo" src = "/Multimedia/Artists/flea.png" onclick="openFullImg(this.src)">
+    <img class="photo" src = "/Multimedia/Artists/jagger.png" onclick="openFullImg(this.src)">
+    <img class="photo" src = "/Multimedia/Artists/shock.png" onclick="openFullImg(this.src)">
+    <img class="photo" src = "/Multimedia/Artists/clapton.png" onclick="openFullImg(this.src)">
+</div> 
 </Section>
+
+
+
+<div id="fullImgBox" style="display:none;">
+  <img id="fullImg">
+  <span id="closeBtn" onclick="closeFullImg()">✕</span>
+</div>
+
+
+<script src="home.js"></script>
 </body>

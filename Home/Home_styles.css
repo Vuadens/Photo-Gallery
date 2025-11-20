@@ -8,7 +8,7 @@
 }
 
 li, a, button{
-    font-family: "Mulish", sans-serif;
+    font-family: sans-serif;
     font-weight: 500px;
     color: white;
     text-decoration: none;
@@ -118,17 +118,39 @@ button:hover{
     cursor: pointer;
 }
 
-/*------------------------------Footer----------------------*/
-.footer{
-    background-color: #0088a9;
-    display: block;
-}
-
-.footer_title{
-       line-height: 20px;
-       color:black;
-       font-size: 30px;
-       font-family: Georgia, 'Times New Roman', Times, serif;
-       text-align: center;
-       text-decoration: dashed;
-}
+#fullImgBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  #fullImgBox img{
+    display:block;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  #closeBtn{
+    position:fixed;
+    top: 50px;
+    right: 50px;
+    color: white;
+    font-size: 35px;
+    padding: 1px 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  #closeBtn:hover{
+    background-color: rgba(0, 136, 169, 0.7);
+  }
+  
