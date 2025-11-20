@@ -2,7 +2,7 @@ body{
     height: 100vh;
     width: 100vw;
     background-color: black;
-    margin: 0rem;
+    margin: 0;
     overflow: hidden;
 }
 
@@ -15,29 +15,44 @@ li, a, button{
 
 header{
     display: flex;
+    position: absolute;
+    width: 100%;
+    margin: auto;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
 }
 
 .logo{ 
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .nav_links{
     list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .nav_links li{
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 5px;
+    white-space: nowrap;
 }
 
 .nav_links li a{
     transition: all 0.3s ease 0s;
-    padding: 0px 30px;
+    padding: 0px 15px;
     font-size: 30px;
-    
 }
 
 .nav_links li a:hover{
@@ -52,6 +67,8 @@ button{
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 button:hover{
