@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&family=Roboto&display=swap');
 
-* { 
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    background-color: #24252A;
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 li, a, button{
@@ -16,31 +20,44 @@ li, a, button{
 
 header{
     display: flex;
+    position: absolute;
+    width: 100%;
+    margin: auto;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
 }
 
 .logo{ 
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .nav_links{
     list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .nav_links li{
     display: inline-block;
-    padding: 0px 20 px;
-
-    
+    padding: 0px 5px;
+    white-space: nowrap;
 }
 
 .nav_links li a{
     transition: all 0.3s ease 0s;
-    padding: 0px 30px;
+    padding: 0px 15px;
     font-size: 30px;
-    
 }
 
 .nav_links li a:hover{
@@ -55,20 +72,24 @@ button{
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 button:hover{
     background-color: rgba(0, 136, 169, 0.7);
 }
 
+
 .main_title{
     align-items: center;
     position: relative;
+    top: 70px;
     left: 40%;
     display: inline-block;
-    padding: 0px 20 px;
+    padding: 18px;
     font-size: 35px;
-    font-family: "Mulish", sans-serif;
+    font-family: sans-serif;
     font-weight: 500px;
     color:  #0088a9;
 }
@@ -93,15 +114,15 @@ button:hover{
     position: relative;
     left: 40%;
     display: inline-block;
-    padding: 0px 20 px;
+    padding: 0px 20;
     font-size: 35px;
-    font-family: "Mulish", sans-serif;
+    font-family: sans-serif;
     font-weight: 500px;
     color: #d7524d;
 }
 
 .artists{    
-    display: column;
+    display: gird;
     justify-content:space-between;
     align-items:center;
     padding: 30px 10%;
