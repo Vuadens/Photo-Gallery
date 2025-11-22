@@ -1,19 +1,27 @@
+* {
+    box-sizing: border-box;
+}
 
 body{
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     background-color: black;
     margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+    display: none;
 }
 
-li, a, button{
+html {
+    font-size: 16px;
+}
+
+a {
     font-family: sans-serif;
-    font-weight: 500px;
+    font-weight: 500;
     color: white;
     text-decoration: none;
 }
@@ -22,17 +30,25 @@ header{
     display: flex;
     position: absolute;
     width: 100%;
-    margin: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 1.25rem 5%;
     box-sizing: border-box;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .logo{ 
     cursor: pointer;
     flex-shrink: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 0;
 }
 
 .nav_links{
@@ -40,24 +56,19 @@ header{
     display: flex;
     margin: 0;
     padding: 0;
-}
-
-header > div {
-    flex: 1;
-    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .nav_links li{
-    display: inline-block;
-    padding: 0px 5px;
-    white-space: nowrap;
+    padding: 0 0.3rem;
 }
 
 .nav_links li a{
     transition: all 0.3s ease 0s;
-    padding: 0px 15px;
-    font-size: 30px;
+    padding: 0 0.9rem;
+    font-size: clamp(1rem, 2.5vw, 1.875rem);
 }
 
 .nav_links li a:hover{
@@ -65,77 +76,73 @@ header > div {
 }
 
 button{
-    padding: 9px 25px;
+    padding: 0.6rem 1.6rem;
     background-color: black;
-    font-size: 25px;
+    font-size: clamp(0.9rem, 2vw, 1.6rem);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     white-space: nowrap;
     flex-shrink: 0;
+    color: white;
 }
 
 button:hover{
     background-color: rgba(0, 136, 169, 0.7);
 }
 
-
-.main_title{
+Section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    position: relative;
-    top: 70px;
-    left: 40%;
-    display: inline-block;
-    padding: 18px;
-    font-size: 35px;
-    font-family: sans-serif;
-    font-weight: 500px;
-    color:  #0088a9;
+    padding-top: 0;
 }
+
 
 .albums{
     display: flex;
-    justify-content:space-between;
-    align-items:center;
-    padding: 30px 10%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem 2%;
+    gap: 1rem;
+    box-sizing: border-box;
 }
 
 .covers{
     box-sizing: border-box;
     border-radius: 1%;
-    height: 350px;
-    width: 350px;
-    margin: 15px;
+    max-width: 100%;
+    height: auto;
+    width: clamp(200px, 30vw, 350px);
+    aspect-ratio: 1;
+    object-fit: cover;
     cursor: pointer;
 }
 
-.second_title{
-    position: relative;
-    left: 40%;
-    display: inline-block;
-    padding: 0px 20;
-    font-size: 35px;
-    font-family: sans-serif;
-    font-weight: 500px;
-    color: #d7524d;
-}
 
 .artists{    
-    display: gird;
-    justify-content:space-between;
-    align-items:center;
-    padding: 30px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem 2%;
+    gap: 1rem;
+    box-sizing: border-box;
 }
 
 .photo {
     box-sizing: border-box;
-    box-shadow: 0px 0px;
     border-radius: 1%;
-    height: 270px;
-    width: 270px;
-    margin: 15px;
-    outline: 5px black;
+    max-width: 100%;
+    height: auto;
+    width: clamp(150px, 25vw, 270px);
+    aspect-ratio: 1;
+    object-fit: cover;
     cursor: pointer;
 }
 
@@ -143,35 +150,36 @@ button:hover{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     background: rgba(0,0,0,0.8);
     display: none; 
     justify-content: center;
     align-items: center;
     z-index: 999;
-  }
+    padding: 1rem;
+}
   
-  #fullImgBox img{
-    display:block;
-    width: 60%;
-    max-width: 600px;
-    border-radius: 10px;
-  }
+#fullImgBox img{
+    display: block;
+    width: 90%;
+    max-width: 90vw;
+    height: auto;
+    border-radius: 0.6rem;
+}
   
-  #closeBtn{
-    position:fixed;
-    top: 50px;
-    right: 50px;
+#closeBtn{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
     color: white;
-    font-size: 35px;
-    padding: 1px 5px;
-    border-radius: 50px;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    padding: 0.5rem;
+    border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-  }
+}
   
-  #closeBtn:hover{
+#closeBtn:hover{
     background-color: rgba(0, 136, 169, 0.7);
-  }
-  
+}
